@@ -4,7 +4,8 @@ services:
     ports: 
       - 5003:5003
     volumes:
-      - .:/app
+      - ./app:/app
     environment: 
       - FLASK_ENV=development
     restart: unless-stopped
+    command: "python /app/app.py"
