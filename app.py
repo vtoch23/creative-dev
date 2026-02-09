@@ -37,7 +37,7 @@ articles = [
 
 @app.route('/')
 def home():
-    return render_template('index.html', articles=articles)
+    return render_template('home.html', articles=articles)
 
 @app.route('/my-work')
 def my_work():

@@ -1,0 +1,10 @@
+services:
+  creative-dev:
+    build: .
+    ports: 
+      - 5003:5003
+    volumes:
+      - .:/app
+    environment: 
+      - FLASK_ENV=development
+    restart: unless-stopped
