@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="mb-12">
+    <h2 class="text-4xl font-bold mb-4">Where Design Meets Code</h2>
+
+    <p class="mb-4 text-lg">
+        Creative Development is the intersection of design, technology, and imagination. It brings together visual thinking and software engineering to create digital experiences that are not only functional, but expressive, human, and engaging.
+    </p>
+
+    <p class="mb-4 text-lg">
+        As artificial intelligence becomes part of everyday development workflows, creativity is not replaced — it is amplified. Developers who understand design, storytelling, and user experience are uniquely positioned to shape how AI-powered tools are built and used.
+    </p>
+
+    <p class="text-lg">
+        The future of software belongs to creative technologists who combine code with curiosity and automation with aesthetics.
+    </p>
+</section>
+
+<section>
+    <h3 class="text-2xl font-semibold mb-6">Articles on Creative Development</h3>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for article in articles %}
+        <div class="bg-white rounded-xl shadow hover:shadow-lg transition overflow-hidden">
+            <img src="{{ article.image }}" class="w-full h-48 object-cover">
+            <div class="p-4">
+                <h4 class="text-lg font-bold mb-2">{{ article.title }}</h4>
+                <p class="text-sm mb-3">{{ article.description }}</p>
+                <a href="{{ article.link }}" target="_blank"
+                   class="text-indigo-600 font-semibold hover:underline">
+                   Read article →
+                </a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</section>
+
+{% endblock %}
